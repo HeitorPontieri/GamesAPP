@@ -16,8 +16,9 @@
     <string name="name_question">Qual seu nome?</string>
     <string name="city_question">Qual é a sua cidade</string>
     <string name="birth_date_question">Data de nascimento</string>
-    <string name="gamer_level">Qual o seu nível gamer?</string>
+    <string name="gamer_level_question">Qual o seu nível gamer?</string>
     <string name="gamer_level_type">Noob</string>
+    <string name="gamer_level">Nível PRO</string>
     <string name="console_type_question">Qual o seu console preferido</string>
     <string name="console_type_answer">Super Nintendo</string>
     <string name="title_sex">Sexo :</string>
@@ -29,8 +30,17 @@
     <string name="save_menu">Salvar</string>
     <string name="settings_menu">Configurações</string>
     <string name="exit_menu">Sair</string>
+    <string name="name_test">Heitor Pontieri</string>
+    <string name="email_test">heitorpontieri@gmail.com</string>
+    <string name="age_test">Idade</string>
+    <string name="age_test_n">16</string>
+    <string name="games_finished">Jogos Terminados</string>
+    <string name="games_finished_n">35</string>
+    <string name="games_currently">Jogos em Curso</string>
+    <string name="games_currently_n">06</string>
+    <string name="games_registered">Seus jogos cadastrados</string>
 
 
 
-    Ω
+
 </resources>

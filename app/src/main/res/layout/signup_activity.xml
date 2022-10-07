@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="153dp">
+        tools:layout_editor_absoluteX="-16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -277,11 +277,13 @@
                 android:id="@+id/chip6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="52dp"
+                android:layout_marginStart="124dp"
+                android:layout_marginEnd="21dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintStart_toEndOf="@+id/chip5"
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
-                app:layout_constraintVertical_bias="0.727"
-                tools:layout_editor_absoluteX="236dp" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/textView11"
