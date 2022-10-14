@@ -7,32 +7,30 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/controle_de_videogame"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/controle_de_videogame"
         android:supportsRtl="true"
         android:theme="@style/Theme.Games"
         tools:targetApi="31">
         <activity
-            android:name=".activity_games"
+            android:name=".ui.holder_layout"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
-            android:exported="false" />
+            android:name=".ui.activity_games"
+            android:exported="true"
+            android:screenOrientation="portrait"
+           />
         <activity
-            android:name=".signup_activity"
-            android:exported="false" />
-        <activity
-            android:name=".Signup_activity"
+            android:name=".ui.SignupActivity"
             android:exported="false"
             android:label="@string/title_activity_signup"
-            android:theme="@style/Theme.Games.NoActionBar" />
+            tools:ignore="MissingClass" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

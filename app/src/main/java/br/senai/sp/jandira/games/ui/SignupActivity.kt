@@ -1,15 +1,19 @@
-package br.senai.sp.jandira.games
+package br.senai.sp.jandira.games.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import br.senai.sp.jandira.games.R
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_activity)
+        supportActionBar!!.show()
+        supportActionBar!!.title = ""
+
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.menu_save) {

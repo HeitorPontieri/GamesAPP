@@ -39,8 +39,8 @@
     <string name="games_currently">Jogos em Curso</string>
     <string name="games_currently_n">06</string>
     <string name="games_registered">Seus jogos cadastrados</string>
-
-
+    <string name="title_holder">a</string>
+    <string name="description_holder">a</string>
 
 
 </resources>
