@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.constraintlayout.motion.widget.TransitionBuilder.validate
+import androidx.room.Room
 import br.senai.sp.jandira.games.R
+import br.senai.sp.jandira.games.dao.GamesDB
+import br.senai.sp.jandira.games.databinding.ActivityGamesBinding
 import br.senai.sp.jandira.games.databinding.ActivityMainBinding
+import br.senai.sp.jandira.games.model.User
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,26 +36,26 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-
-
     }
+
     private fun login (){
         if(validate()){
             val email = binding.idInputEmail.text.toString()
             val password = binding.idInputPassword.text.toString()
+//            val db =
+//
+//
+//            val email_validate =db.toString("email", "Email não encontrado")
+//            val pass_validate = db.("password","Senha não encontrada" )
 
-            val data = getSharedPreferences("data", MODE_PRIVATE)
-            val email_not_found = data.getString("email", "Email não encontrado")
-            val pass_not_found = data.getString("password","Senha não encontrada" )
 
-            if(email == email_not_found && password == pass_not_found){
-                val openProfileGamer = Intent(this, activity_games::class.java)
-                    startActivity(openProfileGamer)
-            }
-            else{
-                Toast.makeText(this,"A autenticação falhou", Toast.LENGTH_LONG).show()
-            }
+//            if(email == email_validate && password == pass_validate){
+//                val activity_profile = Intent(this, activity_games::class.java)
+//                    startActivity(activity_profile)
+//            }
+//            else{
+//                Toast.makeText(this,"Algo deu errado, tente novamente ", Toast.LENGTH_LONG).show()
+//            }
         }
     }
     private fun validate():Boolean{
@@ -64,6 +69,9 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
+
+
+
 
 }
 

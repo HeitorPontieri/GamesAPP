@@ -18,7 +18,7 @@
     <string name="birth_date_question">Data de nascimento</string>
     <string name="gamer_level_question">Qual o seu nível gamer?</string>
     <string name="gamer_level_type">Noob</string>
-    <string name="gamer_level">Nível PRO</string>
+    <string name="gamer_level">Nível Gamer</string>
     <string name="console_type_question">Qual o seu console preferido</string>
     <string name="console_type_answer">Super Nintendo</string>
     <string name="title_sex">Sexo :</string>
@@ -41,6 +41,24 @@
     <string name="games_registered">Seus jogos cadastrados</string>
     <string name="title_holder">a</string>
     <string name="description_holder">a</string>
+
+    <array name="console">
+        <item>Playstation 5</item>
+        <item>Playstation 4</item>
+        <item>Playstation 3</item>
+        <item>Playstation 2</item>
+        <item>Playstation</item>
+        <item>Polystation</item>
+        <item>Xbox Series X</item>
+        <item>Xbox Series S</item>
+        <item>Xbox One</item>
+        <item>Xbox 360</item>
+        <item>Xbox</item>
+        <item>Nintendo 64</item>
+        <item>Desktop</item>
+        <item>GameCube</item>
+        <item>Megadrive</item>
+    </array>
 
 
 </resources>
