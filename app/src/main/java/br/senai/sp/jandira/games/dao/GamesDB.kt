@@ -11,15 +11,14 @@ import br.senai.sp.jandira.games.model.User
 @Database(entities = [User::class, Console::class, Game::class], version = 1)
 abstract class GamesDB : RoomDatabase() {
     abstract fun gamesDAO() : GamesDAO
-
         companion object{
             private lateinit var  instance : GamesDB
 
             fun getDatabase(context: Context):GamesDB{
-                if(!::instance.isInitialized)
-                    instance = Room.databaseBuilder(context,GamesDB::class.java, "db_games")
+                if(!::instance.isInitialized) {
+                    instance = Room.databaseBuilder(context, GamesDB::class.java, "db_games")
                         .allowMainThreadQueries().build()
-
+                }
                 return instance
             }
 

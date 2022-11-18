@@ -10,7 +10,6 @@ class Game {
 
     @PrimaryKey(autoGenerate = true) var id = 0
     var nome = ""
-    var foto:Bitmap? = null
     var titulo = ""
     var descricao = ""
     var estudio = ""

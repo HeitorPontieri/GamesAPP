@@ -7,13 +7,19 @@ import android.widget.Toast
 import androidx.constraintlayout.motion.widget.TransitionBuilder.validate
 import androidx.room.Room
 import br.senai.sp.jandira.games.R
+import br.senai.sp.jandira.games.adapter.GamesAdapter
 import br.senai.sp.jandira.games.dao.GamesDB
 import br.senai.sp.jandira.games.databinding.ActivityGamesBinding
 import br.senai.sp.jandira.games.databinding.ActivityMainBinding
 import br.senai.sp.jandira.games.model.User
+import br.senai.sp.jandira.games.repository.GamesRepository
+import br.senai.sp.jandira.games.ui.activity_games
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
+    lateinit var adapter :GamesAdapter
+    lateinit var repository: GamesRepository
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
     }
 
     private fun login (){
@@ -45,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 //            val db =
 //
 //
-//            val email_validate =db.toString("email", "Email não encontrado")
+//            val email_validate = db.toString("email", "Email não encontrado")
 //            val pass_validate = db.("password","Senha não encontrada" )
 
 

@@ -12,9 +12,9 @@ class User {
     var nome = ""
     var email = ""
     var senha = ""
-    var data_nascimento:LocalDate? = null
+    var data_nascimento = 0
     var cidade = ""
     var nivel = LevelEnum.Noob
-    var console : Console? = null
+    var console = ""
     var sexo  = 'I'
 }
