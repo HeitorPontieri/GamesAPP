@@ -103,7 +103,7 @@
                 android:textColor="@color/mid_blue"
                 app:layout_constraintBottom_toTopOf="@+id/edit_email"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.192"
+                app:layout_constraintHorizontal_bias="0.219"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/photo_img" />
 

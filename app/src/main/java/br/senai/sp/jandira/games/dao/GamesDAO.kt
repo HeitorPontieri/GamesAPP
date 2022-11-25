@@ -10,7 +10,7 @@ import br.senai.sp.jandira.games.model.User
 interface GamesDAO {
 
     @Insert
-    fun save(context: Game): Long
+    fun saveGame(context: Game): Long
 
     @Insert
     fun save (context: User): Long
@@ -26,4 +26,7 @@ interface GamesDAO {
     @Query("SELECT * FROM TBL_USER WHERE email = :email and senha= :senha") fun getLogin(email:String,senha:String):User
 
     @Query("SELECT * FROM TBL_GAMES WHERE id = :id") fun getGameById(id:Int) : Game
+
+
+
 }

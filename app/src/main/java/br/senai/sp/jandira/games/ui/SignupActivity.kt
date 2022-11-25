@@ -68,14 +68,16 @@ class SignupActivity : AppCompatActivity() {
         user.senha = editPassword.text.toString()
         user.cidade = editCity.text.toString()
 
+
+
         var GamesRepository = GamesRepository(this)
 
         if(id>0){
             user.id = id
-           GamesRepository.saveUser(user)
+           GamesRepository.save(user)
         }
         else{
-            id = GamesRepository.saveUser(user).toInt()
+            id = GamesRepository.save(user).toInt()
         }
 
         Toast.makeText(this,"ID : $id", Toast.LENGTH_LONG).show()

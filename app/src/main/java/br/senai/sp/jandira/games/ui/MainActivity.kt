@@ -17,7 +17,7 @@ import br.senai.sp.jandira.games.ui.activity_games
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
-    lateinit var adapter :GamesAdapter
+    lateinit var adapter : GamesAdapter
     lateinit var repository: GamesRepository
 
 
@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         binding.idButtonLogin.setOnClickListener(){
             login()
         }
-
-
     }
 
     private fun login (){
@@ -52,7 +50,12 @@ class MainActivity : AppCompatActivity() {
         val login = db.login(email,password)
 
         if(login != null){
-            val opGames = Intent(this,activity_games@@::class.java)
+            val opGames = Intent(this,activity_games::class.java)
+
+            opGames.putExtra("nome", login.nome)
+            opGames.putExtra("nome",login.email)
+            opGames.putExtra("Level",login.nivel)
+
             startActivity(opGames)
         }
         else{

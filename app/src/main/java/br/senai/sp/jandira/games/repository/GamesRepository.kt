@@ -8,14 +8,14 @@ import br.senai.sp.jandira.games.model.User
 class GamesRepository(context: Context) {
     private val db = GamesDB.getDatabase(context).gamesDAO()
 
-    fun saveUser(user: User) : Long{
+    fun save(user: User) : Long{
         return db.save(user)
     }
     fun login(email:String,senha:String):User{
         return db.getLogin(email,senha)
     }
-    fun save (game : Game): Long {
-        return db.save(game)
+    fun saveGame(game : Game): Long {
+        return db.saveGame(game)
     }
     fun update (game: Game) : Int{
         return db.update(game)
