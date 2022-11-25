@@ -10,7 +10,6 @@ import androidx.room.Room
 import br.senai.sp.jandira.games.R
 import br.senai.sp.jandira.games.adapter.GamesAdapter
 import br.senai.sp.jandira.games.dao.GamesDB
-import br.senai.sp.jandira.games.databinding.ActivityGamesBinding
 import br.senai.sp.jandira.games.databinding.ActivityMainBinding
 import br.senai.sp.jandira.games.model.User
 import br.senai.sp.jandira.games.repository.GamesRepository
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         val login = db.login(email,password)
 
         if(login != null){
-            val opGames = Intent(this,ActivityGamesBinding::class.java)
+            val opGames = Intent(this,activity_games@@::class.java)
             startActivity(opGames)
         }
         else{
