@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.games.ui
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -44,39 +45,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun login (){
-        if(validate()){
-            val email = binding.idInputEmail.text.toString()
-            val password = binding.idInputPassword.text.toString()
-//            val db =
-//
-//
-//            val email_validate = db.toString("email", "Email não encontrado")
-//            val pass_validate = db.("password","Senha não encontrada" )
 
+        val email = binding.idInputEmail.text.toString()
+        val password = binding.idInputPassword.text.toString()
+        val db = GamesRepository(this)
 
-//            if(email == email_validate && password == pass_validate){
-//                val activity_profile = Intent(this, activity_games::class.java)
-//                    startActivity(activity_profile)
-//            }
-//            else{
-//                Toast.makeText(this,"Algo deu errado, tente novamente ", Toast.LENGTH_LONG).show()
-//            }
+        val login = db.login(email,password)
+
+        if(login != null){
+            val opGames = Intent(this,ActivityGamesBinding::class.java)
+            startActivity(opGames)
+        }
+        else{
+            Toast.makeText(this, "Algo deu errado",Toast.LENGTH_LONG)
         }
     }
-    private fun validate():Boolean{
-        if(binding.idInputEmail.text.isEmpty()){
-            binding.idInputEmail.error = "O email é obrigatório"
-            return false
-        }
-        if(binding.idInputPassword.text.isEmpty()){
-            binding.idInputPassword.error = "A senha é obrigatória"
-            return false
-        }
-        return true
     }
-
-
-
-
-}
 

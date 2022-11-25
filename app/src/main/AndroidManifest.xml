@@ -18,8 +18,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.activity_games"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait"
+
            />
         <activity
             android:name=".ui.SignupActivity"

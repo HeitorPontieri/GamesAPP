@@ -1,17 +1,17 @@
 package br.senai.sp.jandira.games.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import br.senai.sp.jandira.games.R
 import br.senai.sp.jandira.games.databinding.SignupActivityBinding
 import br.senai.sp.jandira.games.model.Game
 import br.senai.sp.jandira.games.model.LevelEnum
 import br.senai.sp.jandira.games.model.User
 import br.senai.sp.jandira.games.repository.GamesRepository
-import com.google.android.material.slider.Slider
+
 
 class SignupActivity : AppCompatActivity() {
     lateinit var editName:EditText
@@ -78,28 +78,10 @@ class SignupActivity : AppCompatActivity() {
             id = GamesRepository.saveUser(user).toInt()
         }
 
-        Toast.makeText(this,"ID : ${id}", Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"ID : $id", Toast.LENGTH_LONG).show()
 
         finish()
 
-
-//        val dados = getSharedPreferences("dados", MODE_PRIVATE)
-//
-//        val editor = dados.edit()
-//
-//        editor.putInt("id", user.id)
-//        editor.putString("nome",user.nome)
-//        editor.putString("email", user.email)
-//        editor.putString("senha", user.senha)
-//        editor.putString("cidade", user.cidade)
-//
-//        if (editor.commit()){
-//            Toast.makeText(this, "O registro do usuário foi bem sucedido", Toast.LENGTH_SHORT).show()
-//            finish()
-//        }
-//        else{
-//            Toast.makeText(this, "Erro no registro", Toast.LENGTH_SHORT).show()
-//        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
